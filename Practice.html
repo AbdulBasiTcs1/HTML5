@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML5 website structure example">
+    <title>HTML5 Practice Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header, nav, main, aside, footer { padding: 1em; margin: 1em 0; border-radius: 8px; }
+        header { background: #e3f2fd; }
+        nav { background: #bbdefb; }
+        main { background: #e8f5e9; }
+        aside { background: #fff9c4; }
+        footer { background: #ffe0b2; }
+        section, article { margin-bottom: 1em; }
+        figure { margin: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Practice Website</h1>
+        <p>Demonstrating all major HTML5 elements and features.</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About HTML5</h2>
+            <article>
+                <h3>What is HTML5?</h3>
+                <p>
+                    HTML5 is the latest evolution of the standard that defines HTML. It introduces new elements and attributes for modern web development.
+                </p>
+                <details>
+                    <summary>Read more about HTML5</summary>
+                    <p>HTML5 supports multimedia, graphics, semantic elements, and APIs for complex web applications.</p>
+                </details>
+            </article>
+            <aside>
+                <h4>Quick Fact</h4>
+                <p>HTML5 was finalized as a W3C Recommendation in October 2014.</p>
+            </aside>
+        </section>
+
+        <section id="features">
+            <h2>HTML5 Features</h2>
+            <article>
+                <h3>Semantic Elements</h3>
+                <ul>
+                    <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Forms</h3>
+                <form action="#" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required autofocus><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob"><br>
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color"><br>
+                        <label for="range">Satisfaction (1-10):</label>
+                        <input type="range" id="range" name="range" min="1" max="10"><br>
+                        <label for="file">Upload File:</label>
+                        <input type="file" id="file" name="file"><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </fieldset>
+                </form>
+            </article>
+            <article>
+                <h3>Tables</h3>
+                <table>
+                    <caption>Sample Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Canvas</td>
+                            <td>Draw graphics via scripting</td>
+                        </tr>
+                        <tr>
+                            <td>Audio/Video</td>
+                            <td>Embed media content</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">HTML5 Table Example</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+
+        <section id="media">
+            <h2>Media Elements</h2>
+            <article>
+                <h3>Image</h3>
+                <figure>
+                    <img src="https://via.placeholder.com/300x150" alt="Sample Image" width="300" height="150">
+                    <figcaption>Sample Placeholder Image</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>Audio</h3>
+                <audio controls>
+                    <source src="sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+            <article>
+                <h3>Video</h3>
+                <video width="320" height="240" controls poster="https://via.placeholder.com/320x240">
+                    <source src="sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+            <article>
+                <h3>Canvas</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+                <script>
+                    const c = document.getElementById("myCanvas");
+                    const ctx = c.getContext("2d");
+                    ctx.fillStyle = "#4caf50";
+                    ctx.fillRect(10, 10, 180, 80);
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "#fff";
+                    ctx.fillText("Canvas Demo", 30, 60);
+                </script>
+            </article>
+            <article>
+                <h3>SVG</h3>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lightblue" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact &amp; Map</h2>
+            <address>
+                <strong>HTML5 Practice</strong><br>
+                123 Web Lane<br>
+                Internet City, WWW 00000<br>
+                <a href="mailto:info@example.com">info@example.com</a>
+            </address>
+            <iframe 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=0,0,0,0&amp;layer=mapnik"
+                width="300" height="200" style="border:1px solid black;">
+            </iframe>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Related Links</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML Reference</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools HTML Tutorial</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 HTML5 Practice Website. All rights reserved.</p>
+        <small>Last updated: <time datetime="2024-06-01">June 1, 2024</time></small>
+    </footer>
+</body>
+</html>
